@@ -31,6 +31,7 @@ for (const heart of hearts) {
 let callBtn = document.getElementsByClassName("call");
 let coin = parseInt(document.getElementById("coin").innerText);
 let coinss = parseInt(document.getElementById("coinss").innerText);
+let historyDiv = document.getElementById("entry");
 
 for (let btn of callBtn) {
   btn.addEventListener("click", function () {
@@ -43,8 +44,16 @@ for (let btn of callBtn) {
       coinss = coinss - 20;
       document.getElementById("coin").innerText = coin;
       document.getElementById("coinss").innerText = coinss;
+      let time = new Date().toLocaleString(); // current date & time
+      let entry = document.createElement("p");
+      entry.innerText = `📞 Called ${childH2} (${childp}) at ${time}`;
+      historyDiv.prepend(entry);
     } else {
       alert("Not enough coins");
     }
   });
 }
+document.getElementById("history-btn").addEventListener("click", function () {
+  document.getElementById("history-btn").style.backgroundColor = "red";
+  document.getElementById("entry").style.display = "block";
+});
