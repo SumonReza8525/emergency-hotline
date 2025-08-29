@@ -39,15 +39,18 @@ for (let btn of callBtn) {
       const parent = btn.parentNode.parentNode;
       const childH2 = parent.querySelector("h2").innerText;
       const childp = parent.querySelector(".number").innerText;
-      alert("calling " + childH2 + " " + childp);
+      alert("📞 calling " + childH2 + " " + childp);
       coin = coin - 20;
       coinss = coinss - 20;
       document.getElementById("coin").innerText = coin;
       document.getElementById("coinss").innerText = coinss;
       let time = new Date().toLocaleString(); // current date & time
       let entry = document.createElement("p");
-      entry.innerText = `📞 Called ${childH2} (${childp}) at ${time}`;
+      entry.innerText = `${childH2}          ${time}
+      (${childp}) `;
+
       entry.style.backgroundColor = "#41ff6a3d";
+      entry.style.fontSize = "18px";
       entry.style.padding = "8px";
       entry.style.borderRadius = "8px";
       entry.style.marginBottom = "10px";
