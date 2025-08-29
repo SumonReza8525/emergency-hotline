@@ -37,17 +37,19 @@
           <div
             class="love-container bg-[#41ff6a3d] px-4 py-1 rounded-3xl font-semibold flex gap-3 justify-between items-center"
           >
-            <span>0</span> <img class="w-7" src="./assets/heart.png" alt="" />
+            <span id="heartNum">0</span>
+            <img class="w-7" src="./assets/heart.png" alt="" />
           </div>
           <div
             class="coin-container bg-[#41ff6a3d] px-4 py-1 rounded-3xl font-bold flex gap-3"
           >
-            <span>100</span> <img class="w-7" src="./assets/coin.png" alt="" />
+            <span id="coin">100</span>
+            <img class="w-7" src="./assets/coin.png" alt="" />
           </div>
           <div
             class="copy-container bg-[#00A63E] px-4 py-1 rounded-3xl text-white font-medium"
           >
-            <span>2</span> Copy
+            <span id="totalCopy">0</span> Copy
           </div>
         </div>
       </div>
@@ -60,14 +62,16 @@
           tabindex="0"
           class="dropdown-content menu bg-base-100 rounded-box z-1 p-2 shadow-sm bg-[#00A63E] w-[90px]"
         >
-          <div class="love-container font-semibold text-white">
-            <span>0</span> love
+          <div class="love-container font-semibold text-white flex gap-3">
+            <span id="heartNum1">0</span
+            ><img class="w-6" src="./assets/heart.png" alt="" />
           </div>
-          <div class="coin-container font-semibold text-white">
-            <span>100</span> coin
+          <div class="coin-container font-semibold text-white flex gap-3">
+            <span id="coinss">100</span>
+            <img class="w-5" src="./assets/coin.png" alt="" />
           </div>
           <div class="copy-container font-semibold text-white">
-            <span>2</span> Copy
+            <span id="totalCopy1">0</span> Copy
           </div>
         </ul>
       </div>
@@ -77,7 +81,7 @@
       <!-- Banner section -->
 
       <section
-        class=".banner-section h-[300px] border-2 border-cyan-700 bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] flex flex-col justify-center items-center text-white space-y-2 mb-10"
+        class=".banner-section h-[300px] bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] flex flex-col justify-center items-center text-white space-y-2 mb-10 text-center"
       >
         <img
           class="w-[80px] md:w-[100px] lg:w-[120px]"
@@ -100,7 +104,7 @@
         >
           <!-- card cointainer... -->
           <!-- card-1 -->
-          <div class="card-container p-4 rounded-2xl bg-white">
+          <div class="card-container rounded-2xl bg-white py-8 p-6">
             <div class="part1 flex justify-between items-center mb-2">
               <img
                 class="bg-[#FFE3E2] p-3 max-w-[50px] rounded-xl"
@@ -108,7 +112,7 @@
                 alt=""
               />
               <div class="text-2xl">
-                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-heart hover:text-red-700 heart"></i>
               </div>
             </div>
             <div class="part2">
@@ -116,7 +120,7 @@
                 National Emergency Number
               </h2>
               <p class="mb-2 text-gray-500">National Emergency</p>
-              <h1 class="font-bold text-3xl">999</h1>
+              <p id="sumo" class="number font-bold text-3xl">999</p>
               <p
                 class="text-gray-500 bg-gray-200 w-fit px-3 rounded-2xl text-[17px] py-1 mt-2 mb-6"
               >
@@ -137,7 +141,7 @@
           </div>
 
           <!-- card 2 -->
-          <div class="card-container p-4 rounded-2xl bg-white" w-[300px]>
+          <div class="card-container py-8 p-6 rounded-2xl bg-white" w-[300px]>
             <div class="part1 flex justify-between items-center mb-2">
               <img
                 class="bg-[#FFE3E2] p-3 max-w-[50px] rounded-xl"
@@ -145,7 +149,7 @@
                 alt=""
               />
               <div class="text-2xl">
-                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-heart hover:text-red-700 heart"></i>
               </div>
             </div>
             <div class="part2">
@@ -153,7 +157,7 @@
                 Police Helpline Number
               </h2>
               <p class="mb-2 text-gray-500">Police</p>
-              <h1 class="font-bold text-3xl">999</h1>
+              <h1 class="number font-bold text-3xl">999</h1>
               <p
                 class="text-gray-500 bg-gray-200 w-fit px-3 rounded-2xl text-[17px] py-1 mt-2 mb-6"
               >
@@ -173,7 +177,7 @@
             </div>
           </div>
           <!-- card 3 -->
-          <div class="card-container p-4 rounded-2xl bg-white">
+          <div class="card-container py-8 p-6 rounded-2xl bg-white">
             <div class="part1 flex justify-between items-center mb-2">
               <img
                 class="bg-[#FFE3E2] p-3 max-w-[50px] rounded-xl"
@@ -181,7 +185,7 @@
                 alt=""
               />
               <div class="text-2xl">
-                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-heart hover:text-red-700 heart"></i>
               </div>
             </div>
             <div class="part2">
@@ -189,7 +193,7 @@
                 Fire Service Number
               </h2>
               <p class="mb-2 text-gray-500">Fire Service</p>
-              <h1 class="font-bold text-3xl">999</h1>
+              <h1 class="number font-bold text-3xl">999</h1>
               <p
                 class="text-gray-500 bg-gray-200 w-fit px-3 rounded-2xl text-[17px] py-1 mt-2 mb-6"
               >
@@ -209,7 +213,7 @@
             </div>
           </div>
           <!-- card 4 -->
-          <div class="card-container p-4 rounded-2xl bg-white">
+          <div class="card-container py-8 p-6 rounded-2xl bg-white">
             <div class="part1 flex justify-between items-center mb-2">
               <img
                 class="bg-[#FFE3E2] p-3 max-w-[50px] rounded-xl"
@@ -217,13 +221,13 @@
                 alt=""
               />
               <div class="text-2xl">
-                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-heart hover:text-red-700 heart"></i>
               </div>
             </div>
             <div class="part2">
               <h2 class="font-bold text-3xl sm:text-2xl">Ambulance Service</h2>
               <p class="mb-2 text-gray-500">Ambulance</p>
-              <h1 class="font-bold text-3xl">1994-999999</h1>
+              <h1 class="number font-bold text-3xl">1994-999999</h1>
               <p
                 class="text-gray-500 bg-gray-200 w-fit px-3 rounded-2xl text-[17px] py-1 mt-2 mb-6"
               >
@@ -244,7 +248,7 @@
           </div>
           <!-- card 5 -->
 
-          <div class="card-container p-4 rounded-2xl bg-white">
+          <div class="card-container py-8 p-6 rounded-2xl bg-white">
             <div class="part1 flex justify-between items-center mb-2">
               <img
                 class="bg-[#FFE3E2] p-3 max-w-[50px] rounded-xl"
@@ -252,7 +256,7 @@
                 alt=""
               />
               <div class="text-2xl">
-                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-heart hover:text-red-700 heart"></i>
               </div>
             </div>
             <div class="part2">
@@ -260,7 +264,7 @@
                 Women & Child Helpline
               </h2>
               <p class="mb-2 text-gray-500">Women & Child Helpline</p>
-              <h1 class="font-bold text-3xl">109</h1>
+              <h1 class="number font-bold text-3xl">109</h1>
               <p
                 class="text-gray-500 bg-gray-200 w-fit px-3 rounded-2xl text-[17px] py-1 mt-2 mb-6"
               >
@@ -280,7 +284,7 @@
             </div>
           </div>
           <!-- card 6 -->
-          <div class="card-container p-4 rounded-2xl bg-white">
+          <div class="card-container py-8 p-6 rounded-2xl bg-white">
             <div class="part1 flex justify-between items-center mb-2">
               <img
                 class="bg-[#FFE3E2] p-3 max-w-[50px] rounded-xl"
@@ -288,7 +292,7 @@
                 alt=""
               />
               <div class="text-2xl">
-                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-heart hover:text-red-700 heart"></i>
               </div>
             </div>
             <div class="part2">
@@ -296,7 +300,7 @@
                 Anti-Corruption Helpline
               </h2>
               <p class="mb-2 text-gray-500">Anti-Corruption</p>
-              <h1 class="font-bold text-3xl">106</h1>
+              <h1 class="number font-bold text-3xl">106</h1>
               <p
                 class="text-gray-500 bg-gray-200 w-fit px-3 rounded-2xl text-[17px] py-1 mt-2 mb-6"
               >
@@ -316,7 +320,7 @@
             </div>
           </div>
           <!-- card 7 -->
-          <div class="card-container p-4 rounded-2xl bg-white">
+          <div class="card-container py-8 p-6 rounded-2xl bg-white">
             <div class="part1 flex justify-between items-center mb-2">
               <img
                 class="bg-[#FFE3E2] p-3 max-w-[50px] rounded-xl"
@@ -324,7 +328,7 @@
                 alt=""
               />
               <div class="text-2xl">
-                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-heart hover:text-red-700 heart"></i>
               </div>
             </div>
             <div class="part2">
@@ -332,7 +336,7 @@
                 Electricity Helpline
               </h2>
               <p class="mb-2 text-gray-500">Electricity Outage</p>
-              <h1 class="font-bold text-3xl">16216</h1>
+              <h1 class="number font-bold text-3xl">16216</h1>
               <p
                 class="text-gray-500 bg-gray-200 w-fit px-3 rounded-2xl text-[17px] py-1 mt-2 mb-6"
               >
@@ -353,7 +357,7 @@
           </div>
           <!-- card 8 -->
 
-          <div class="card-container p-4 rounded-2xl bg-white">
+          <div class="card-container py-8 p-6 rounded-2xl bg-white">
             <div class="part1 flex justify-between items-center mb-2">
               <img
                 class="bg-[#FFE3E2] p-3 max-w-[50px] rounded-xl"
@@ -361,13 +365,13 @@
                 alt=""
               />
               <div class="text-2xl">
-                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-heart hover:text-red-700 heart"></i>
               </div>
             </div>
             <div class="part2">
               <h2 class="font-bold text-3xl sm:text-2xl">Brac Helpline</h2>
               <p class="mb-2 text-gray-500">Brac</p>
-              <h1 class="font-bold text-3xl">16445</h1>
+              <h1 class="number font-bold text-3xl">16445</h1>
               <p
                 class="text-gray-500 bg-gray-200 w-fit px-3 rounded-2xl text-[17px] py-1 mt-2 mb-6"
               >
@@ -388,7 +392,7 @@
           </div>
           <!-- card 9 -->
 
-          <div class="card-container p-4 rounded-2xl bg-white">
+          <div class="card-container py-8 p-6 rounded-2xl bg-white">
             <div class="part1 flex justify-between items-center mb-2">
               <img
                 class="bg-[#FFE3E2] p-3 max-w-[50px] rounded-xl"
@@ -396,7 +400,7 @@
                 alt=""
               />
               <div class="text-2xl">
-                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-heart hover:text-red-700 heart"></i>
               </div>
             </div>
             <div class="part2">
@@ -404,7 +408,7 @@
                 Bangladesh Railway Helpline
               </h2>
               <p class="mb-2 text-gray-500">Bangladesh Railway</p>
-              <h1 class="font-bold text-3xl">163</h1>
+              <h1 class="number font-bold text-3xl">163</h1>
               <p
                 class="text-gray-500 bg-gray-200 w-fit px-3 rounded-2xl text-[17px] py-1 mt-2 mb-6"
               >
@@ -438,5 +442,7 @@
         </div>
       </section>
     </main>
+
+    <script src="./js/script.js"></script>
   </body>
 </html>
