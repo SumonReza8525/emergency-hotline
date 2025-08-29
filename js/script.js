@@ -7,7 +7,7 @@ for (const button of buttons) {
     const text = childH1.innerText;
     await navigator.clipboard.writeText(text);
     copyNum.push(text);
-    alert("copied : " + text);
+    alert("Copied Number is: " + text);
     console.log(copyNum.length);
     const totalCopy = document.getElementById("totalCopy");
     totalCopy.innerText = copyNum.length;
@@ -21,7 +21,7 @@ const hearts = document.getElementsByClassName("heart");
 let count = 0;
 for (const heart of hearts) {
   heart.addEventListener("click", function () {
-    console.log("heart clicked");
+    // console.log("heart clicked");
     count = count + 1;
     document.getElementById("heartNum").innerText = count;
     document.getElementById("heartNum1").innerText = count;
