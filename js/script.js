@@ -31,7 +31,7 @@ for (const heart of hearts) {
 let callBtn = document.getElementsByClassName("call");
 let coin = parseInt(document.getElementById("coin").innerText);
 let coinss = parseInt(document.getElementById("coinss").innerText);
-let historyDiv = document.getElementById("entry");
+let historyDiv = document.getElementById("entri");
 
 for (let btn of callBtn) {
   btn.addEventListener("click", function () {
@@ -47,7 +47,21 @@ for (let btn of callBtn) {
       let time = new Date().toLocaleString(); // current date & time
       let entry = document.createElement("p");
       entry.innerText = `📞 Called ${childH2} (${childp}) at ${time}`;
+      entry.style.backgroundColor = "#41ff6a3d";
+      entry.style.padding = "8px";
+      entry.style.borderRadius = "8px";
+      entry.style.marginBottom = "10px";
+      entry.style.boxShadow = "2px 2px 5px gray";
       historyDiv.prepend(entry);
+      const clear = document
+        .getElementById("clear")
+        .addEventListener("click", function () {
+          document.getElementById("entri").innerText = "";
+          coin = 100;
+          coinss = 100;
+          document.getElementById("coin").innerText = coin;
+          document.getElementById("coinss").innerText = coinss;
+        });
     } else {
       alert("Not enough coins");
     }
@@ -55,5 +69,5 @@ for (let btn of callBtn) {
 }
 document.getElementById("history-btn").addEventListener("click", function () {
   document.getElementById("history-btn").style.backgroundColor = "red";
-  document.getElementById("entry").style.display = "block";
+  document.querySelector("#entry").style.display = "block";
 });
