@@ -49,8 +49,9 @@ for (let btn of callBtn) {
       entry.innerText = `${childH2}          ${time}
       (${childp}) `;
 
-      entry.style.backgroundColor = "#41ff6a3d";
+      entry.style.backgroundColor = "#2B3856";
       entry.style.fontSize = "18px";
+      entry.style.color = "white";
       entry.style.padding = "8px";
       entry.style.borderRadius = "8px";
       entry.style.marginBottom = "10px";
